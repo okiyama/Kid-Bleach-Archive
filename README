@@ -7,6 +7,7 @@ I thought it a noble cause to archive teh kittehs so I made this script.
 
 Dependencies: 
 Bash
+Wget
 Internet Connection
 
 Usage: 
@@ -21,7 +22,7 @@ by running "crontab --help"
 
 Functionality:
 Checks if you have an old.txt file if not, it makes it.
-Grabs all the images from www.kidbleach.com
+Grabs all the images from http://kidbleach.com
 If you had an old.txt file it checks them newly downloaded images against
 the images you already have.
 If this is a first run it saves them to main_archive.
