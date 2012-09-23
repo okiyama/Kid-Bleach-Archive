@@ -20,8 +20,8 @@ often as you like, most likely in a cronjob.
 If you want to use this with a cronjob just run "crontab -e"  
 Add a line that looks like this to the bottom of that file:  
 
-  0 12 * * * source "/path/to/Kid_Bleach_Archive.sh"  
-
+    0 12 * * * source "/path/to/Kid_Bleach_Archive.sh"  
+    
 That will run it daily at noon. For more info on cronjob, check the man page
 by running "crontab --help"
 
