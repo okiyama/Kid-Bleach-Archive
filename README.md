@@ -9,9 +9,11 @@ gets updated there is nowhere that those images get saved to. The previous
 pictures are simply gone from access.
 I thought it a noble cause to archive teh kittehs so I made this script.
 
+<<<<<<< HEAD
 **Dependencies:**  
 Bash  
 Wget  
+>>>>>>> 1334041d68043975cfbb6143493b1cfee3e8f2ad
 
 **Usage:**  
 Save the script anywhere and keep it in this same folder.Run the script as
@@ -23,10 +25,12 @@ Add a line that looks like this to the bottom of that file:
 That will run it daily at noon. For more info on cronjob, check the man page
 by running "crontab --help"
 
+<<<<<<< HEAD
 **Functionality:**  
 Checks if you have an old.txt file if not, it makes it.  
 Grabs all the images from www.kidbleach.com  
 If you had an old.txt file it checks them newly downloaded images against  
+>>>>>>> 1334041d68043975cfbb6143493b1cfee3e8f2ad
 the images you already have.
 If this is a first run it saves them to main_archive.  
 If it checks the images and finds no differences it deletes the recently  
