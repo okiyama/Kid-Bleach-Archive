@@ -1,13 +1,13 @@
 Kids Bleach Archiving Tool
 ==========================
 
-**Purpose:** 
+**Purpose:**  
 The way that kidbleach.com works is it calls an rss feed to decide what
 pictures to display on the homepage. These images are typically kittens,
 puppies and other such cute things. I realized however that when this rss feed
 gets updated there is nowhere that those images get saved to. The previous
 pictures are simply gone from access.
-I thought it a noble cause to archive teh kittehs so I made this script.
+I thought it a noble cause to archive these images so I made this script.
 
 **Dependencies:**  
 Bash  
@@ -27,13 +27,13 @@ by running "crontab --help"
 
 **Functionality:**  
 Checks if you have an old.txt file if not, it makes it.  
-Grabs all the images from www.kidbleach.com  
-If you had an old.txt file it checks them newly downloaded images against  
+Grabs all the images from http://kidbleach.com/  
+If you had an old.txt file it checks them newly downloaded images against
 the images you already have.
 If this is a first run it saves them to main_archive.  
-If it checks the images and finds no differences it deletes the recently  
+If it checks the images and finds no differences it deletes the recently
 downloaded images.
-If there are differences it moves the new images to main_archive and then  
+If there are differences it moves the new images to main_archive and then
 it deletes the now outdated folder and updates old.txt
 
 As such, this can be run as much as you want and it will only use bandwidth
