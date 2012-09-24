@@ -12,7 +12,7 @@ then
 	echo $date > ./old.txt #we make an old.txt with the date in it to signal to future runs it is not first run
 	mkdir $date;
 	cd $date;
-	curl  -O 'http://kidbleach.com/images/[01-20].jpg' #Downloads all of the images on kidbleach
+	curl  -O 'http://kidbleach.com/public/images/[1-20].jpg' #Downloads all of the images on kidbleach
 	cd ..;
 	mkdir -p ./main_archive #Makes a main archive if we don't have one
 	if [ ! -d ./main_archive ];
@@ -21,7 +21,7 @@ then
 		exit 1
 	fi
 	cp -r ./$date ./main_archive
-return # we made an old.txt and did initial download and moved to main archive so we are done
+exit 1 # we made an old.txt and did initial download and moved to main archive so we are done
 fi
 
 #so from here on out we know it is not the first run
@@ -29,8 +29,7 @@ fi
 echo "Welcome back! Let's do a temporary download that we will check against your old folder and see if it is different."
 mkdir $date;
 cd $date;
-curl  -O 'http://kidbleach.com/images/[01-20].jpg' #Downloads all of the images on kidbleach
-done;
+curl  -O 'http://kidbleach.com/public/images/[1-20].jpg' #Downloads all of the images on kidbleach
 cd ..;
 
 #so at this point we have our current folder with the name $date, we need to get a hold of what our old folder name is and store it
@@ -39,7 +38,7 @@ if [`diff -q $old ./$date` != ""] #if it is quiet when we diff then there is no 
 	then 
 		echo "They aren't different, we're done here so let me kill that temporary folder for you." #since there is no difference we can get rid of the current folder
 		rm -rf ./$date 
-		return #nothing left to do since there is no diff
+		exit 1 #nothing left to do since there is no diff
 fi
 
 echo "Hurray! They're different! Let's clean up that useless old temporary folder and store your current temporary folder to the main archive"
@@ -55,4 +54,4 @@ then
 fi
 cp -r ./$date ./main_archive
 echo "All done, you have your up to date archive in main_archive now!"
-return
+exit 1
