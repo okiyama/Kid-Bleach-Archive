@@ -11,7 +11,7 @@ I thought it a noble cause to archive these images so I made this script.
 
 **Dependencies:**  
 Bash  
-Wget  
+Curl  
 
 **Usage:**  
 Save the script anywhere and keep it in this same folder.Run the script as
